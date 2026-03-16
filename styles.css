@@ -1,0 +1,149 @@
+:root {
+  --primary-color: #d35400;
+  --secondary-color: lightgray;
+  --section-color: white;
+  --font-family: "segoe ui";
+  --shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
+  --radius: 25px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  max-width: 2560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  height: 100px;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  gap: 10px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+header ul li a:hover {
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80dvh;
+}
+
+section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  overflow: hidden;
+  align-items: stretch;
+  height: 50dvh;
+  width: 100%;
+}
+
+#section1 {
+  background-image: url(assets/background-pizza.png);
+}
+#section2 {
+  background-image: url(assets/pexels-eyupcan-timur-424989336-30726883.jpg);
+}
+#section3{
+  background-image: url(assets/pexels-willoworld-3767968.jpg);
+}
+
+.sec-cont {
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.hero__image {
+  width: 40%;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+section > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 16px;
+}
+
+section div button{
+  color: white;
+  width: 200px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: none;
+  cursor: pointer;
+  transition: ease-in-out .5s;
+}
+
+section div button:hover{scale: 1.05;}
+
+footer {
+  padding: 20px;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer iframe {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  border: none;
+}
+
+footer div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer div ul {
+  list-style: none;
+}
