@@ -2,7 +2,7 @@
   --primary-color: #d35400;
   --secondary-color: lightgray;
   --section-color: white;
-  --font-family: "segoe ui";
+  --font-family: "Papyrus";
   --shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.5);
   --radius: 25px;
 }
@@ -25,6 +25,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
@@ -49,13 +54,13 @@ header ul {
   gap: 10px;
 }
 
-header ul li a {
+header ul li a, .footera {
   color: white;
   text-decoration: none;
   transition: all 0.5s;
 }
 
-header ul li a:hover {
+header ul li a:hover, .footera:hover {
   color: black;
 }
 
@@ -75,29 +80,26 @@ section {
   display: flex;
   overflow: hidden;
   align-items: stretch;
-  height: 50dvh;
+  min-height: 50dvh;
   width: 100%;
 }
-
+section h1 {
+  color: var(--primary-color);
+  font-size: 4rem;
+}
 #section1 {
   background-image: url(assets/background-pizza.png);
 }
 #section2 {
   background-image: url(assets/pexels-eyupcan-timur-424989336-30726883.jpg);
 }
-#section3{
+#section3 {
   background-image: url(assets/pexels-willoworld-3767968.jpg);
 }
 
 .sec-cont {
   background: white;
   box-shadow: var(--shadow);
-}
-
-.hero__image {
-  width: 40%;
-  margin: 5px;
-  border-radius: 5px;
 }
 
 section > div {
@@ -107,19 +109,22 @@ section > div {
   padding: 16px;
 }
 
-section div button{
+section div a {
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
   color: white;
   width: 200px;
-  height: 50px;
   background-color: var(--primary-color);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  border: none;
   cursor: pointer;
-  transition: ease-in-out .5s;
+  transition: ease-in-out 0.5s;
 }
 
-section div button:hover{scale: 1.05;}
+section div a:hover {
+  scale: 1.05;
+}
 
 footer {
   padding: 20px;
